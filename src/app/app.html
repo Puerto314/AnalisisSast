@@ -1,12 +1,3 @@
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Basic HTML CSS Login Form</title>
-  <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body>
-<body>
 <div class="login">
   <div class="login-screen">
     <div class="app-title">
@@ -14,21 +5,31 @@
     </div>
 
     <div class="login-form">
+
       <div class="control-group">
-        <input type="text" class="login-field" value="" placeholder="username" id="login-name">
-        <label class="login-field-icon fui-user" for="login-name"></label>
+        <input
+          type="text"
+          class="login-field"
+          placeholder="username"
+          [(ngModel)]="usuario">
       </div>
 
       <div class="control-group">
-        <input type="password" class="login-field" value="" placeholder="password" id="login-pass">
-        <label class="login-field-icon fui-lock" for="login-pass"></label>
+        <input
+          type="password"
+          class="login-field"
+          placeholder="password"
+          [(ngModel)]="password">
       </div>
 
-      <a class="btn btn-primary btn-large btn-block" href="#">Login</a>
-      <a class="login-link" href="#">Lost your password?</a>
+      <button
+        class="btn btn-primary btn-large btn-block"
+        (click)="validar()">
+        Login
+      </button>
+
+      <p>{{ mensaje }}</p>
+
     </div>
   </div>
 </div>
-</body>
-</body>
-</html>
